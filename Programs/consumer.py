@@ -20,7 +20,7 @@ recursion = 'y'
 extension = ''
 try:
     for msg in consumer:
-        print(msg)
+        # print(msg)
         DIR = msg.value[0]
         recursion = msg.value[1]
         extension = msg.value[2]
@@ -55,6 +55,6 @@ except NameError:
 else:
     print(f"Most recently modified file is {mod_date[0]} in {mod_date[1]} with time {mod_date[2]}")
 
-details = input("Do you want more insights on the files?\t")
-if details == 'y' or details == 'Y':
-    pprint.pprint(files)
+    details = input("Do you want more insights on the files?\t")
+    if details == 'y' or details == 'Y':
+        pprint.pprint(files)

@@ -31,6 +31,8 @@ def number_of_extension(files, extension):
     return number_of_extension
 
 def size(files):
+    if not bool(files):
+        raise NameError
     largest_size = -1
     smallest_size = float('inf')
     largest_file = ''
@@ -51,6 +53,8 @@ def size(files):
     return (largest, smallest)
 
 def modify(files):
+    if not bool(files):
+        raise NameError
     recent_modified_time = datetime.datetime.min
     recent_modified_name = ''
     recent_modified_location = ''
